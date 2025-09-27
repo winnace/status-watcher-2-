@@ -16,7 +16,7 @@ def verifica_servidor():
     global online_ja_notificado
     while True:
         try:
-            url = f"http://{136.243.104.68}:{50019}/players.json"
+            url = f"http://{SERVER_IP}:{SERVER_PORT}/players.json"
             resp = requests.get(url, timeout=5)
             if resp.status_code == 200:
                 if not online_ja_notificado:
