@@ -1,0 +1,5 @@
+# status-watcher-2-
+
+Flask
+requests
+gunicorn
