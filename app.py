@@ -6,9 +6,9 @@ import threading
 app = Flask(__name__)
 
 # Configurações (trocar pelos seus valores)
-SERVER_IP = "IP_DO_SEU_SERVIDOR"
-SERVER_PORT = "30120"
-BOTGHOST_WEBHOOK_URL = "https://api.botghost.com/webhooks/SEU_WEBHOOK_AQUI"
+SERVER_IP = "136.243.104.68"
+SERVER_PORT = "50019"
+BOTGHOST_WEBHOOK_URL = "https://api.botghost.com/webhook/1420042126330171543/snj3bn71gmqm0prdozs748"
 
 online_ja_notificado = False
 
@@ -16,7 +16,7 @@ def verifica_servidor():
     global online_ja_notificado
     while True:
         try:
-            url = f"http://{SERVER_IP}:{SERVER_PORT}/players.json"
+            url = f"http://{136.243.104.68}:{50019}/players.json"
             resp = requests.get(url, timeout=5)
             if resp.status_code == 200:
                 if not online_ja_notificado:
